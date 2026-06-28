@@ -1,0 +1,280 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 75% 40%, rgba(255, 255, 255, 0.16) 1.8px, transparent 1.8px),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.09) 2.2px, transparent 2.2px),
+    radial-gradient(circle at 10% 85%, rgba(255, 255, 255, 0.14) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 90% 15%, rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
+  background-size: 350px 350px;
+  animation: floatParticles 28s linear infinite;
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+  filter: contrast(1.15) saturate(1.18) brightness(1.03);
+  animation: breathBg 24s ease-in-out infinite;
+}
+
+.fire-reveal {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  --tx: calc(var(--x) - 24px);
+  --ty: calc(var(--y) - 18px);
+  mask-image:
+    radial-gradient(circle 350px at var(--x) var(--y),
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,1) 55%,
+      rgba(255,255,255,0.3) 85%,
+      transparent 100%);
+  -webkit-mask-image:
+    radial-gradient(circle 350px at var(--x) var(--y),
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,1) 55%,
+      rgba(255,255,255,0.3) 85%,
+      transparent 100%);
+}
+
+.reveal-right {
+  position: absolute;
+  right: 40px;
+  bottom: 100px;
+  width: 420px;
+  color: white;
+  z-index: 2;
+}
+
+.reveal-right h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.reveal-right p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.reveal-left {
+  position: absolute;
+  left: 50px;
+  bottom: 100px;
+  width: 420px;
+  color: white;
+  z-index: 2;
+}
+
+.reveal-left h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.reveal-left p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.fire-reveal-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+  filter: contrast(1.15) saturate(1.18) brightness(1.03);
+  animation: breathBg 24s ease-in-out infinite;
+}
+
+.fire-reveal.active {
+  opacity: 1;
+}
+
+.right {
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.st-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+}
+
+.right:hover .st-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover-only styles for Sanji on the Nami page */
+.right.hover-only h1 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+}
+
+.right.hover-only:hover h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.left {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 70px;
+  color: rgb(27, 3, 98);
+  text-shadow:
+    0 0 8px rgba(247, 214, 214, 0.6),
+    0 0 18px rgba(254, 173, 173, 0.4);
+}
+
+.left p {
+  font-size: 20px;
+  color:black
+  
+}
+
+.button-column {
+  position: absolute;
+  bottom: 50px;
+  left: 420px;
+  z-index: 10;
+}
+
+.st-btn {
+  margin-left: 310px;
+  font-size: 19px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: rgb(8, 16, 17);
+  color: rgb(251, 248, 248);
+  border: 1px solid rgba(240, 233, 233, 0.862);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.st-btn:hover {
+  background-color: #faf6f6;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(227, 26, 26, 0.6);
+}
+
+.right h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 60px;
+  width: 470px;
+  text-shadow:
+    0 0 8px rgba(18, 14, 14, 0.6),
+    0 0 18px rgba(19, 6, 6, 0.4);
+}
+
+.right p {
+  font-size: 22px;
+  width: 400px;
+}
+
+.left.home-left h1 {
+  color: white;
+  animation: titleGlow 6s ease-in-out infinite;
+}
+
+.left.home-left p {
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.left.luffy-left h1 {
+  color: rgb(255, 255, 255);
+  animation: redTitleGlow 6s ease-in-out infinite;
+}
+
+.left.luffy-left p,
+.left.usopp-left p {
+  color: black;
+}
+
+.left.usopp-left h1 {
+  color: rgb(10, 23, 75);
+  animation: blueTitleGlow 6s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.75), 0 0 20px rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 255, 255, 0.35);
+  }
+}
+
+@keyframes redTitleGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(215, 25, 25, 0.4), 0 0 18px rgba(215, 25, 25, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(215, 25, 25, 0.75), 0 0 30px rgba(215, 25, 25, 0.45);
+  }
+}
+
+@keyframes blueTitleGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(10, 23, 75, 0.4), 0 0 18px rgba(10, 23, 75, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(10, 23, 75, 0.75), 0 0 30px rgba(10, 23, 75, 0.45);
+  }
+}
+
+@keyframes breathBg {
+  0%, 100% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes floatParticles {
+  0% {
+    background-position: 0 0;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    background-position: 30px -350px;
+    opacity: 0.4;
+  }
+}
