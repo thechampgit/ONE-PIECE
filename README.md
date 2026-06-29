@@ -4,7 +4,7 @@ An interactive One Piece-inspired web experience built using **React**, **Vite**
 
 
 <p align="center">
-  <img src="images/wanted-posters.jpg" alt="One Piece Wanted Posters" width="700">
+  <img src="What are Straw Hat Pirates Dreams_.jpeg" alt="One Piece Wanted Posters" width="700">
 </p>
 
 ## Features
