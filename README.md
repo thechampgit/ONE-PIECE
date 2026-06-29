@@ -1,10 +1,12 @@
 # 🏴‍☠️ One Piece Website
 
 An interactive One Piece-inspired web experience built using **React**, **Vite**, and **Framer Motion**. The project recreates the adventurous spirit of the One Piece universe through immersive visuals, smooth animations, and character-focused sections.
+<br>
+
 
 
 <p align="center">
-  <img src="What are Straw Hat Pirates Dreams_.jpeg" alt="One Piece Wanted Posters" width="700">
+  <img src="images/What are Straw Hat Pirates Dreams_.jpeg" alt="One Piece Wanted Posters" width="700">
 </p>
 
 ## Features
