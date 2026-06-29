@@ -2,6 +2,11 @@
 
 An interactive One Piece-inspired web experience built using **React**, **Vite**, and **Framer Motion**. The project recreates the adventurous spirit of the One Piece universe through immersive visuals, smooth animations, and character-focused sections.
 
+
+<p align="center">
+  <img src="images/wanted-posters.jpg" alt="One Piece Wanted Posters" width="700">
+</p>
+
 ## Features
 
 * Character-themed pages
